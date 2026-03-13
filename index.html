@@ -6,12 +6,82 @@
     <title>Porsche</title>
 
     <link
-      href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Smooth+Sans:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Rajdhani:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Our CSS file -->
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <header>
+      <div class="logo">PORSCHE.</div>
+    </header>
+
+    <div class="section-intro">
+        <h2 class="section-title">
+            The
+            <br>Masterpieces</br>
+        </h2>
+    </div>
+    <p class="section-desc">
+          A lineup of six. Each a masterclass in the 
+        art of the sports car. Hover to explore the full 
+        specifications and character of German engineering.
+    </p>
+
+    <!--all car rows-->
+    <div class="cars-container" id="carsContainer">
+    
+    <!--car row 1-->    
+    <div class="car-row" data-index="0">
+        
+        <!--image-->
+        <div class="car-image-side">
+        <div class="car-number">01</div>
+
+        <div class="car-img-wrap">
+            <img class="car-img"
+                src="images/gt3rs.jpg"
+                alt="Porsche 911 GT3 RS">
+        </div> 
+       <!--car label row 1--> 
+    <div class="car-label">
+        <div class="car-name">Porsche 911 GT3 RS</div>
+        <div class="car-type">The Favourite</div>
+    </div>  
+        </div>
+
+     <div class="car-info-panel">
+        <div class="info-brow">Porsche 992 series</div>
+        <div class="ca-year">2024 Model Year</div>
+        <p class="desc">
+             The most extreme road-legal 911 ever built. Aerodynamics 
+            borrowed directly from motorsport generate massive downforce. 
+            A 4.0-litre flat-six screaming to 9,000 rpm. Pure. Unfiltered.
+        </p>
+        <div class="specs-grid">
+            <div class="spec-cell">
+              <div class="spec-val">518</div>
+              <div class="spec-key">Horsepower</div>
+            </div>
+            
+        <div class="specs-grid">
+            <div class="spec-cell">
+              <div class="spec-val">3.0s</div>
+              <div class="spec-key">0-60 mph</div>
+            </div>
+        
+        <div class="specs-grid">
+            <div class="spec-cell">
+              <div class="spec-val">184</div>
+              <div class="spec-key">Top speed</div>
+            </div>
+          </div>
+         </div>
+        </div>
+       </div>      
+      </div>   
+
+
+
+  </body>
 </html>
