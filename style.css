@@ -1,0 +1,44 @@
+/* Import our color variables */
+:root {
+  --bg: #080808;
+  --surface: #0f0f0f;
+  --border: #1e1e1e;
+  --accent: #a855f7;
+  --accent-light: #c084fc;
+  --text: #f5f2ec;
+  --muted: #5a5a5a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Rajdhani", sans-serif;
+  overflow-x: hidden;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  z-index: 100;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 30px;
+  background: rgba(255, 255, 255, 0);
+}
+
+.logo {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: 5px;
+  color: var(--text);
+}
