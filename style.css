@@ -125,19 +125,112 @@ header {
 }
 
 .car-row:hover .car-img {
-  filter: brightness(1) saturate(1.1);
-  transform: scale(1.04);
+  filter: brightness(1.09) saturate(1);
+  transform: scale(1.08);
+}
+/* Car name and tag below image */
+.car-label {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  color: var(--accent);
 }
 
-/* Purple glow line under image */
-.car-img-wrap::after {
-  content: "";
-  position: absolute;
-  bottom: 10;
-  left: 10;
-  right: 10;
-  height: 10px;
-  background: linear-gradient(to right, var(--accent-light));
-  transform: scaleY(10);
-  transition: transform 0.3s ease;
+/*prolly js (check it out)*/
+.car-row:hover .car-model-name {
+  color: var(--accent-light);
+}
+
+.car-type-tag {
+  font-size: 0.68rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  padding: 5px 12px;
+  transition:
+    border-color 0.3s,
+    color 0.3s;
+}
+
+.car-row:hover .car-type-tag {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* INFO PANEL */
+.car-info-panel {
+  border-left: 1px solid var(--border);
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  transform: translateX(20px);
+  transition:
+    opacity 0.5s 0.15s ease,
+    transform 0.5s 0.15s ease,
+    border-color 0.3s;
+  overflow: hidden;
+  min-width: 420px;
+}
+.car-row:hover .car-info-panel {
+  opacity: 1;
+  transform: translateX(0);
+  border-color: rgba(168, 85, 247, 0.3);
+}
+
+/*that purple thingy with the car series*/
+.info-eyebrow {
+  font-size: 0.65rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.info-title {
+  font-family: "Rajdhani", serif;
+  font-size: 2.6rem;
+  font-weight: 300;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.info-desc {
+  font-size: 0.88rem;
+  line-height: 1.85;
+  color: rgba(245, 242, 236, 0.65);
+  font-weight: 300;
+  margin-bottom: 28px;
+}
+
+/* SPECS GRID */
+.specs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+
+.spec-cell {
+  background: var(--surface);
+  padding: 14px 16px;
+}
+
+.spec-val {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--accent-light);
+  line-height: 1;
+}
+.spec-key {
+  font-size: 0.62rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 3px;
 }
